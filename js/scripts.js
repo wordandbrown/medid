@@ -50,20 +50,23 @@ jQuery(function($) {
 
 	function mobileMenu() {
 		$('#menu-icon').on("click", function(){
-	        $('#nav nav').toggleClass('active-menu');
-	        $('#menu-icon').toggleClass('active-menu-icon');
 	        if ($('#nav nav').hasClass('active-menu')) {
+		        $('#nav nav').removeClass('active-menu');
+		        $('#menu-icon').removeClass('active-menu-icon');
 	            $('body, html').css({'overflow-y': 'hidden'});
 	            $(document).bind('touchmove', function(e) {
 	                e.preventDefault();
 	            });
 	        }
 	        else {
+		        $('#nav nav').addClass('active-menu');
+		        $('#menu-icon').addClass('active-menu-icon');
 	            $('body, html').css({'overflow-y': 'auto', '-webkit-overflow-scrolling': 'touch'});
 	            $(document).unbind('touchmove');
 	        }
 	    });
 	    $('#nav nav').on("click", function(){
+		    $('#nav nav').removeClass('active-menu');
 	        $('#menu').removeClass('active-menu');
 	        $('#menu-icon').removeClass('active-menu-icon');
 	        $('body, html').css({'overflow-y': 'auto', '-webkit-overflow-scrolling': 'touch'});
@@ -86,31 +89,31 @@ jQuery(function($) {
 		function hasScrolled() {
 
 		    var st = $(this).scrollTop();
-		    var hero = $('header#header').outerHeight();
+		    // var hero = $('header#header').outerHeight();
 		    
-		    // Make sure they scroll more than delta
-		    if(Math.abs(lastScrollTop - st) <= delta) {
-		        return;
-		    }
-		    else {
-		      // If they scrolled down and are past the navbar, add class .nav-up.
-		      // This is necessary so you never see what is "behind" the navbar.
-	          if ((st) > hero) {
-	          	$('section#nav').css({'position': 'fixed', 'background': '#eee'});
-			      // if (st > lastScrollTop && st > navbarHeight){
-			      //     // Scroll Down
-			      //     $('section#nav').addClass('nav-up').css({'top': -navbarHeight});
-			      // } else {
-			      //     // Scroll Up
-			      //     if(st + $(window).height() < $(document).height()) {
-			      //         $('section#nav').removeClass('nav-up').css({'top': 0});
-			      //     }
-			      // }
-	          }
-	          else {
-	          	$('section#nav').css({'position': 'absolute', 'background': 'transparent'});
-	          }
-		    }
+		    // // Make sure they scroll more than delta
+		    // if(Math.abs(lastScrollTop - st) <= delta) {
+		    //     return;
+		    // }
+		    // else {
+		    //   // If they scrolled down and are past the navbar, add class .nav-up.
+		    //   // This is necessary so you never see what is "behind" the navbar.
+	     //      if ((st) > hero) {
+	     //      	$('section#nav').css({'position': 'fixed', 'background': '#eee'});
+			   //    // if (st > lastScrollTop && st > navbarHeight){
+			   //    //     // Scroll Down
+			   //    //     $('section#nav').addClass('nav-up').css({'top': -navbarHeight});
+			   //    // } else {
+			   //    //     // Scroll Up
+			   //    //     if(st + $(window).height() < $(document).height()) {
+			   //    //         $('section#nav').removeClass('nav-up').css({'top': 0});
+			   //    //     }
+			   //    // }
+	     //      }
+	     //      else {
+	     //      	$('section#nav').css({'position': 'absolute', 'background': 'transparent'});
+	     //      }
+		    // }
 		    
 		    lastScrollTop = st;
 		}

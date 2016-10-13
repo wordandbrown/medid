@@ -28,24 +28,10 @@
 				</ul>
 			</div>
 			<div class="small-24 columns">
-				<small>© 2016 Word and Brown Insurance Administrators</small>
+				<p class="copyright">© 2016 Word and Brown Insurance Administrators</p>
 			</div>
 		</div>
 
-
-
-
-
-
-<!-- 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wbc' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'wbc' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'wbc' ), 'wbc', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-
-
-
-
-		</div> --><!-- .site-info -->
 	</footer><!-- #colophon -->
 
 	

@@ -104,11 +104,20 @@
 	p {
 		color: white;
 	}
-	.image-wrap {
-		width: 6rem;
-		height: 6rem;
-		margin: 2rem;
-		display: inline-block;
+}
+
+#how-it-works {
+	ul {
+		margin-left: 2rem;
+		li {
+			p {
+				color: $dark-blue;
+			}
+			i {
+				margin-right: 1rem;
+				color: $accent-color;
+			}
+		}
 	}
 }
 
@@ -128,5 +137,24 @@
 	}
 	h3 {
 		color: white;
+	}
+	img {
+		width: 16rem;
+		padding: 2rem 1rem;
+	}
+}
+
+
+.icon-wrap {
+	width: 6rem;
+	height: 6rem;
+	margin: 2rem;
+	display: inline-block;
+}
+
+.image-wrap {
+	padding-bottom: 4rem;
+	@include grid-lg {
+		padding-bottom: 0;
 	}
 }
