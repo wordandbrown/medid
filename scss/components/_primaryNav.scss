@@ -1,0 +1,428 @@
+/*--------------------------------------
+Primary Navigation
+--------------------------------------*/
+$header-height: 50px;
+$logo-width: 150px;
+
+section#nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    //height: $header-height;
+    padding: 0;
+    background: rgba(0,0,0,0.02);
+    z-index: 999;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    // &.nav-up {
+    //     top: -$header;
+    // }
+    .row {
+        padding: 20px;
+        margin-bottom: 0;
+    }
+    .wordandbrown-logo {
+        text-align: left;
+        float: left;
+        width: $logo-width;
+    }
+    nav {
+        margin-left: $logo-width;
+        position: relative;
+        ul {
+            margin: 0; padding: 0;
+            text-align: right;
+            li {
+                display: inline-block;
+                padding-left: 30px;
+                a {
+                    text-transform: uppercase;
+                    color: $hero-reverse-light;
+                    padding-bottom: 7px;
+                    line-height: $header-height;
+                    font-weight: 500;
+                }
+                &.current_page_item a {
+                    color: #fff;
+                    border-bottom: 2px solid $accent-color;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    @include grid-lg {
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    section#nav nav {
+        position: absolute;
+        width: 100vw;
+        background: rgba(0,0,0,0);
+        height: 100vh;
+        right: 100%;
+        left: auto;
+        top: 0;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        //@include transition(background, .3s, 0s, linear);
+        &.active-menu {
+            right: 0;
+            background: rgba(0,0,0,0.9);
+            //@include transition(background, .3s, 0s, linear);
+            ul {
+                li {
+                    opacity: 1;
+                    border-bottom: 1px solid rgba(255,255,255,.2);
+                    transform: translateY(0px);
+                    -webkit-transform: translateY(0px);
+                }
+            }
+        }
+        ul {
+            position: relative;
+            width: 100%;
+            padding: 100px 0;
+            li {
+                text-align: center;
+                display: block;
+                padding: 0;
+                opacity: 0;
+                    transform: translateY(-200px);
+                    -webkit-transform: translateY(-200px);
+                &:nth-child(1) {
+                    @include transition(all, .2s, .45s, ease-in-out);
+                }
+                &:nth-child(2) {
+                    @include transition(all, .2s, .4s, ease-in-out);
+                }
+                &:nth-child(3) {
+                    @include transition(all, .2s, .35s, ease-in-out);
+                }
+                &:nth-child(4) {
+                    @include transition(all, .2s, .3s, ease-in-out);
+                }
+                &:nth-child(5) {
+                    @include transition(all, .2s, .25s, ease-in-out);
+                }
+                &:nth-child(6) {
+                    @include transition(all, .2s, .2s, ease-in-out);
+                }
+                a {
+                    border: none;
+                    display: block;
+                    width: 100%;
+                    padding: 1rem;
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    color: white;
+                }
+              &.current_page_item a {
+                  color: #eee;
+                  border-bottom: none;
+                  font-weight: 400;
+              }
+            }
+        }
+    }
+}
+
+
+#menu-icon {
+    display: none;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    cursor: pointer;
+    //background: rgba(245,245,245,.8);
+    -webkit-transform: translate3d(0, 0, 0);
+    //border: 20px solid transparent;
+    //padding: 10px;
+    &:hover {
+        //background: rgba(255,255,255,1);
+    }
+    span {
+        width: 40px;
+        height: 3px;
+        top: 0;
+        left: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        background: white;
+        z-index: 10;
+    }
+    &::after {
+        content: '';
+        width: 40px;
+        height: 3px;
+        background: white;
+        top: 27px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        @include transform (rotate(0deg));
+        @include transition(all, .3s, 0s, linear);
+    }
+    &::before {
+        content: '';
+        width: 40px;
+        height: 3px;
+        background: white;
+        bottom:  27px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        @include transform (rotate(0deg));
+        @include transition(all, .3s, 0s, linear);
+    }
+    &.active-menu-icon {
+        span {
+            display: none;
+        }
+        &::after {
+            top: 38px;
+            //background: white;
+            width: 50px;
+            height: 3px;
+            @include transform (rotate(-45deg));
+            @include transition(all, .3s, 0s, linear);
+        }
+        &::before {
+            bottom: 38px;
+            height: 3px;
+            width: 50px;
+            //background: white;
+            @include transform (rotate(45deg));
+            @include transition(all, .3s, 0s, linear);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+        #menu-icon {
+            display: block;
+        }
+}
+
+
+// /*--------------------------------------
+// Global Styles for Primary Menu
+// --------------------------------------*/
+
+// /* Add transition to containers so they can push in and out. */
+
+// #wrapper {
+//     position: relative;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// nav, #overlay, #toggleMenuContainer, nav#primary {
+//   @include kreeTransition();
+// }
+
+// #overlay {
+//     opacity: 0;
+//     visibility: hidden;  
+//     -webkit-transform: scale(0.9);
+//     transform: scale(0.9);
+//     background-color: rgba(0, 0, 0, 0.9);
+//     width: 100vw; height: 100%;
+//     position: fixed;
+//     top: 0; right: 0;
+//     margin: auto;
+//     z-index: 99;
+// }
+
+// /*--------------------------------------
+// Primary Nav
+// --------------------------------------*/
+
+// nav#primary {
+
+//     opacity: 0;
+//     visibility: hidden;
+//     display: none;
+
+//     @include grid-md {
+
+//         opacity: 1;
+//         visibility: visible;
+//         text-align: center;
+//         display: block;
+//         z-index:1000;
+        
+//         ///////////////////////////////////////////////////
+//         // Comment the 2 lines below to make standard nav (non-fixed)
+//         ///////////////////////////////////////////////////
+
+//         position: fixed;
+//         width: 100%;
+
+//         ///////////////////////////////////////////////////
+
+//         &.sticky {
+//           position: fixed;
+//           background-color: rgba(0,0,0,0.8);
+//           top: 0;
+//           width: 100%;
+//           //height: 150px;
+//           box-shadow: 0px 30px 60px -45px #000000, -1px 0 0 rgba(0,0,0,.1);
+//           -webkit-overflow-scrolling: touch;
+//         }        
+
+//         li {
+//             display: inline-block;
+//         }
+//     }
+
+//     ul {
+//         margin:0; padding: 0;
+
+//         @include grid-md {
+
+//             height: auto;
+
+//             li {
+//                 display: inline-block;
+//             }
+//         }
+
+//         li {
+//             padding: 20px;
+//             margin-bottom: 5px;
+            
+//             /*--------------------------------------
+//             Links Styling
+//             --------------------------------------*/
+
+//             a {
+//               font-size: 1.4em;
+//             }
+
+//         }
+//     }
+// }
+
+// /*--------------------------------------
+// Mobile Menu Toggle
+// --------------------------------------*/
+
+// #toggleMenuContainer {
+//     z-index: 100;
+//     position: fixed;
+//     top: 15px; right: 15px;
+//     background-color: rgba(255,255,255,0.8);
+//     @include grid-md {
+//         display: none;
+//     }
+// }
+
+// .toggle-nav{
+//   width: 55px;
+//   height: 55px;
+//   display: block;
+
+//     @include grid-sm {
+//         top: 6px;        
+//     }  
+  
+//   &:after,
+//   &:before {
+//     content: "";
+//   }
+  
+//   span,
+//   &::after,
+//   &::before {
+//     backface-visibility: hidden;
+//     position: absolute;
+//     left: 13px;
+//     right: 13px;
+//     border-top: 4px solid $primary-color;
+//     transition: .2s;
+//     border-radius: 6px;
+//   }
+  
+//   &::before {
+//     top: 18px;
+//   }
+
+//   span {
+//     top: 26px;
+//   }
+
+//   &::after {
+//     top: 34px;
+//   }
+
+//   &.active {
+//     &::before,
+//     &::after {
+//       top: 25px;
+//       backface-visibility: hidden;
+//       transition: .3s;
+//       border-top-color: #fff;
+//     }
+
+//     &::before {
+//       transform: rotate(45deg);
+//     }
+
+//     span {
+//       opacity: 0;
+//     }
+
+//     &::after {
+//       transform: rotate(-45deg);
+//     }
+//   }
+// }
+
+// /*--------------------------------------
+// Active Menu Wrapper
+// --------------------------------------*/
+// body.menu-active {
+
+//     #overlay {
+//         opacity: 1;
+//         visibility: visible;
+//         -webkit-transform: scale(1);
+//         transform: scale(1);
+//     }
+
+//     #toggleMenuContainer {
+//         background-color: transparent;
+//     }
+
+//     nav#primary {
+//         opacity: 1;
+//         visibility: visible;
+//         overflow-x: hidden;
+//         overflow-y: auto;
+//         display: block;
+//         margin: 30px 0 0 0; //added top margin to avoid overlapping with close button
+//         z-index: 99999;
+//         position: fixed;
+//         top: 50%;
+//         left: 50%;
+//         width: 100vh;
+//         height: 90vh;
+//         -webkit-transform: translateX(-50%) translateY(-50%);
+//         -ms-transform: translateX(-50%) translateY(-50%);
+//         transform: translateX(-50%) translateY(-50%);
+//         text-align: center;
+//     }
+// }

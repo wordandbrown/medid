@@ -1,0 +1,92 @@
+/*--------------------------------------
+Foundation Extension
+--------------------------------------*/
+
+.row {
+  margin-bottom: 1em;
+}
+
+.fullRow {
+    padding: 20px;
+    background-color: yellow;
+}
+
+.pad {padding: 1em;} //IMPORTANT FOR PADDING INNER
+
+ul {
+    &.edgeless {
+        padding-left: 0!important;
+    }
+}
+
+.cf { zoom: 1; } .cf:before,.cf:after {content: ""; display: table;}.cf:after {clear: both;}
+.cross {text-decoration: line-through;}
+
+.divider-20 {width: 100%;min-height: 20px;}
+.divider-30 {width: 100%;min-height: 30px;}
+.divider-40 {width: 100%;min-height: 40px;}
+.divider-50 {width: 100%;min-height: 50px;}
+
+/*--------------------------------------
+Helpers
+--------------------------------------*/
+.aCenter {text-align: center !important;}
+.alignright {float: right; padding-left: 20px; padding-bottom: 20px; padding-top: 10px;}
+.alignleft {float: left; padding-right: 20px; padding-bottom: 20px; padding-top: 10px;}
+
+ul.subNav {
+    list-style: none;
+    margin-left: 0; padding-left: 0;
+    li {
+        display: inline-block;
+        border-right: 1px #39393a solid;
+        padding-right: 8px;
+        padding-left: 4px;
+        &:last-child {border-right: none; padding-right: 0;}
+        &:first-child {padding-left: 0}
+    }
+}
+
+/*--------------------------------------
+Form
+--------------------------------------*/
+form {
+    label {
+        font-weight: 700;
+        margin-top: 2em;
+    }
+    button {
+        color: white;
+    }
+    button:hover {
+        color: #fff;
+    }
+    .requiredFld {
+        //added for honey pot method
+        display: none !important;
+    }
+}
+
+hr {
+border: 0;
+height: 0;
+border-top: 1px dotted rgba(0, 0, 0, 0.1);
+border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+}
+
+a.button {
+    border: 3px solid $accent-color;
+    background: none;
+    color: black;
+    padding: 1.6rem 5rem;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin: 2rem 0;
+    @include border-radius(0);
+    &:hover {
+        background: $accent-color;
+        color: white;
+    }
+}

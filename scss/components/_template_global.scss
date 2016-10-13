@@ -1,0 +1,382 @@
+/* html,
+body {
+    height: 100%;
+} */
+
+
+/*--------------------------------------
+Body
+--------------------------------------*/
+html, body {
+    margin:0; padding:0; border:0;
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+a {
+    text-decoration: none;
+    color: $accent-color;
+    outline: 0;
+    border: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    border: 0;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+    li {
+        list-style: none;
+    }
+    &.inline li {
+        display: inline-block;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+ul.inline, ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+nav ul, nav ol {
+  list-style: none;
+}
+
+/*--------------------------------------
+Global Styles
+--------------------------------------*/
+
+main{
+
+}
+
+
+
+/*--------------------------------------
+Header
+--------------------------------------*/
+header{
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+    min-height:80vh;
+    background-size:cover;
+    position:relative;
+}
+
+
+
+/*--------------------------------------
+Hero Area
+--------------------------------------*/
+
+#hero {
+    padding: 4rem 1rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+    text-align: left;
+    h4 {
+        color: $accent-color;
+    }
+    h1 {
+        color: #fff;
+        margin: 0;
+        line-height: 1.2em;
+        text-align: left;
+    }
+    h3 {
+        color: $hero-reverse-light;
+        margin-top:3rem;
+    }
+    @include grid-lg {
+        position:absolute;
+        left:50%;
+        top:50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+/*--------------------------------------
+Section
+--------------------------------------*/
+
+section {
+    padding: 6rem 2rem;
+    text-align: center;
+    h4 {
+        color: $accent-color;
+    }
+    h3 {
+    }
+    p {
+        color: #999;
+    }
+    // h2 {
+    //     text-align: center;
+    //     color: #444;
+    //     font-size: 2.2em;
+    // }
+    .underlined-header {
+        text-align: center;
+        position: relative;
+        padding-bottom: 4rem;
+        margin-bottom: 4rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: block;
+            width: 5rem;
+            border-top: 2px solid $accent-color;
+        }
+    }
+    .align-left {
+        text-align: left;
+    }
+}
+
+
+/*--------------------------------------
+Forms
+--------------------------------------*/
+
+form.simple-form {
+    [type='text'],
+    [type='password'],
+    [type='date'],
+    [type='datetime'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='email'],
+    [type='number'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='url'],
+    [type='color'],
+    textarea,
+    select {
+        border: none;
+        background: none;
+        display: inline-block;
+        padding: 1.4rem;
+        border: 2px solid #ccc;
+        @include border-radius (0);
+        @include box-shadow (0 0 0 white);
+        &:focus {
+            border: none;
+            border: 2px solid $accent-color;
+            @include box-shadow (0 0 0 white);
+            outline: none;
+        }
+    }
+}
+
+/*--------------------------------------
+Footer
+--------------------------------------*/
+
+$footer-icon-size: 26px;
+$icon-color: white;
+
+footer {
+    background: $footer-bg;
+    color: white;
+    text-align: center;
+    padding: 8rem 0;
+    .logo {
+        img {
+            width: 10rem;
+            height: auto;
+        }
+    }
+    .columns {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        @include grid-lg {
+            text-align: left;
+        }
+    }
+    ul {
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+
+// footer {
+//     background: $footer-bg;
+//     color: white;
+//     .footer-top {
+//         padding: 50px 0;
+//         margin-bottom: 0;
+//         .links {
+//             ul>li>a {
+//                 color: #c4c4c4;
+//                 text-transform: uppercase;
+//                 &:hover {
+//                     color: white;
+//                 }
+//             }
+//         }
+//         .contacts {
+//             color: $footer-grey;
+//             div {
+//                 position: relative;
+//             }
+//             .company {
+//                 text-transform: uppercase;
+//             }
+//             span.location {
+//                 position: absolute;
+//                 top: 0;
+//                 left: -1rem;
+//             }
+//             .media-contacts {
+//                 padding-top: 20px;
+//                 text-transform: uppercase;
+//                 span {
+//                     margin-right: 10px;
+//                 }
+//                 i.fa {
+//                     color: $footer-grey;
+//                 }
+//                 a:hover {
+//                     i.fa {
+//                         color: white;
+//                     }
+//                 }
+//             }
+//         }
+//         .social {
+//             text-align: right;
+//             .stay-connected {
+//                 text-transform: uppercase;
+//                 color: $footer-grey;
+//                 text-align: center;
+//                 margin-bottom: 20px;
+//             }
+//             a {
+//                 padding: 2px 6px;
+//                 cursor: pointer;
+//                 display: inline-block;
+//                 margin: -3px;
+//                 i.fa {
+//                     border: 2px solid $icon-color;
+//                     color: $icon-color;
+//                     @include border-radius(50%);
+//                     &::before {
+//                         display: inline-block;
+//                         line-height: $footer-icon-size;
+//                         height: $footer-icon-size;
+//                         width: $footer-icon-size;
+//                         font-size: $footer-icon-size - 12;
+//                         text-align: center;
+//                     }
+//                 }
+//                 &:hover {
+//                     i.fa {
+//                         background: $icon-color;
+//                         &::before {
+//                             color: $footer-bg;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     .footer-devider {
+//         div>div {
+//             border-top: 1px solid rgba(white,.3);
+//         }
+//     }
+//     .footer-bottom {
+//         padding: 0 0 100px 0;
+//         small {
+//             color: $footer-grey;
+//             line-height: $footer-icon-size + 6;
+//         }
+//         .bottom-menu {
+//             ul {
+//                 text-align: right;
+//             }
+//             li {
+//                 display: inline-block;
+//                 margin-left: 20px;
+//                 vertical-align: middle;
+//             }
+//             a {
+//                 color: $footer-grey;
+//                 &:hover {
+//                     small {
+//                         color: white;
+//                     }
+//                 }
+//                 &.top {
+//                     height: $footer-icon-size + 6;
+//                     width: $footer-icon-size + 6;
+//                     background: $footer-grey;
+//                     position: relative;
+//                     display: inline-block;
+//                     @include border-radius(50%);
+//                     margin-top: 3px;
+//                     text-align: center;
+//                     i.fa {
+//                         color: $footer-bg;
+//                     }
+//                     &:hover {
+//                         background: white;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+/*--------------------------------------
+Foundation fixes
+--------------------------------------*/
+
+.centered {
+    float: none !important;
+}

@@ -1,0 +1,132 @@
+/* CONTACT US
+-----------------------------*/
+.page-contact {
+	main & {
+		background-image:url(../img/hero/contact.jpg);
+	}
+}
+
+.page-MedID {
+	main & {
+		background-image:url(../img/hero/medid-hero.png);
+	}
+}
+
+#contact-information {
+	text-align: center;
+
+	.companies-outer {
+		margin-top: 32px;
+	}
+
+	.company-wrapper {
+		margin-bottom: 32px;
+		h3 {
+			//font-size: 1.4em;
+			font-weight: 400;
+			line-height: 1.8em;
+			margin: 0;
+			i {
+				font-weight: 400;
+			}
+		}
+	}
+
+}
+
+#media-contact {
+	$icon-size: 40px;
+	background-image:url(../img/contact/media-contact.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	color: white;
+	h2, h3, p {
+		color: white;
+	}
+	h3 {
+		font-family: $font-family-body;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 20px 0;
+	}
+	p {
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+		text-align: center;
+	}
+    .social {
+        text-align: center;
+        a {
+            padding: 2px 6px;
+            cursor: pointer;
+            display: inline-block;
+            margin: -3px;
+            i.fa {
+                border: 2px solid $icon-color;
+                color: $icon-color;
+                @include border-radius(50%);
+                &::before {
+                    display: inline-block;
+                    line-height: $icon-size;
+                    height: $icon-size;
+                    width: $icon-size;
+                    font-size: $icon-size - 20;
+                    text-align: center;
+                }
+            }
+            &:hover {
+                i.fa {
+                    background: $icon-color;
+                    &::before {
+                        color: $footer-bg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#send-message {
+	text-align: center;
+}
+
+#features-overview {
+	background-image:url(../img/assets/features-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	.section-title {
+		color: white;
+	}
+	h2 {
+		color: $dark-blue;
+	}
+	p {
+		color: white;
+	}
+	.image-wrap {
+		width: 6rem;
+		height: 6rem;
+		margin: 2rem;
+		display: inline-block;
+	}
+}
+
+#all-in-one {
+	background: #eee;
+}
+
+#download-app {
+	background-image:url(../img/assets/download-app-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	.section-title {
+		color: white;
+	}
+	h2 {
+		color: $dark-blue;
+	}
+	h3 {
+		color: white;
+	}
+}

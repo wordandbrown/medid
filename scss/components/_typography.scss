@@ -1,0 +1,83 @@
+// @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Open+Sans:400,800,300,600,700,700italic|Oswald:400,700,300|Roboto:400,300,400italic,500,700,900);
+// @import 'https://fonts.googleapis.com/css?family=Merriweather';
+// @import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/css?family=Lato';
+/////////////////////////////////////////////////////////////////////////////
+// FONTS
+/////////////////////////////////////////////////////////////////////////////
+
+//$font-family-header: 'Oswald', sans-serif;
+$font-family-header: 'Lato', sans-serif;
+$font-family-body: 'Lato', sans-serif;
+//$font-family-body: 'Open Sans', sans-serif;
+
+// We use these to define default font stacks
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif !default;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace !default;
+
+// We use these to define default font weights
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+/////////////////////////////////////////////////////////////////////////////
+// BODY
+/////////////////////////////////////////////////////////////////////////////
+
+html * {
+	font-family: $font-family-body;
+	letter-spacing: normal;
+	font-weight: 300;
+	line-height: 1.6em;
+}
+
+h1 {
+	font-size: 4.375rem;
+	font-family: $font-family-header;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 2.25em;
+	font-family: $font-family-header;
+	font-weight: 400;
+	padding-bottom: 2rem;
+	margin-bottom: 0;
+	//color: $secondary-color;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-family: $font-family-header;
+	//text-transform: uppercase;
+	font-weight: 300;
+	//margin-top: 2rem;
+}
+
+h4 {
+	font-size: 1.25em;
+	font-family: $font-family-header;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+h5, h6 {
+	font-family: $font-family-body;
+	font-weight: 300;
+}
+
+p {
+	font-size: 1.25rem;
+	margin-bottom: 4rem;
+	line-height: 2.25rem;
+ 	font-weight: 300;
+ 	&.no-margin-bottom {
+ 		margin-bottom: 0;
+ 	}
+}
+
+p.small {
+	font-size: 1rem;
+	line-height: 1.2em;
+}
