@@ -1,7 +1,7 @@
 <?php
 
 global $varCurrentPage;
-$varCurrentPage = "page-MedID";
+$varCurrentPage = "page-legal";
 
 get_header(); ?>
 

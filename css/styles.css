@@ -1062,6 +1062,10 @@ section#nav nav ul li.current_page_item a {
   }
 }
 
+.legal section#nav {
+  background: #0f3e49;
+}
+
 #menu-icon {
   display: none;
   width: 80px;
