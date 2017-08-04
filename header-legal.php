@@ -20,7 +20,7 @@ global $varCurrentPage;
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="legal">
 <main id="main" class="page-contact" role="main">
 
 	<header id="header" role="banner" class="legal">
@@ -36,8 +36,8 @@ global $varCurrentPage;
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div id="primary-menu" class="menu">
 					<ul>
-						<li class="page_item current_page_item">
-							<a href="<?= get_template_directory_uri(); ?>/MedID/">Legal Header</a>
+						<li class="page_item">
+							<a href="<?= get_template_directory_uri(); ?>/MedID/">Home</a>
 						</li>
 						<li class="page_item">
 							<a href="<?= get_template_directory_uri(); ?>/Support/">Support</a>

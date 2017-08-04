@@ -186,6 +186,9 @@ section {
     @include grid-lg {
         padding: 6rem 2rem;
     }
+    &.legal {
+        text-align: left;
+    }
 }
 
 

@@ -4,11 +4,9 @@
 
 <main role="main" id="two-column-content">
 
-	<section class="content-full">
-		<div class="pure-g row">
-			<div class="pure-u-1">
-
-			<h1>TEST</h1>
+	<section class="legal">
+		<div class="row">
+			<div class="small-24 columns">
 
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -36,7 +36,7 @@ global $varCurrentPage;
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div id="primary-menu" class="menu">
 					<ul>
-						<li class="page_item current_page_item">
+						<li class="page_item">
 							<a href="<?= get_template_directory_uri(); ?>/MedID/">Application</a>
 						</li>
 						<li class="page_item">
